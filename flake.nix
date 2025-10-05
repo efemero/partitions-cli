@@ -45,7 +45,7 @@
     in
     {
       packages.${system}.default = naerskLib.buildPackage {
-        pname = "partition";
+        pname = "partitions";
         version = "0.1.0";
         src = ./.;
         cargo = rustToolchain;
