@@ -68,18 +68,23 @@
       };
 
       devShells.${system}.default = pkgs.mkShell {
-        buildInputs = [
-          rustToolchain
-          pkgs.pkg-config
-          pkgs.python313
-          pkgs.pre-commit
-          pkgs.python313Packages.jinja2
-          pkgs.lilypond
-          pkgs.fontconfig
-          pkgs.ghostscript
-        ]
-        ++ fontPackages;
+        buildInputs =
+          with pkgs;
+          [
+            rustToolchain
+            pkg-config
+            lilypond
+            fontconfig
+            ghostscript
+          ]
+          ++ fontPackages;
 
+        nativeBuildInputs = with pkgs; [
+          prek
+          python313
+          python313Packages.jinja2
+          uv
+        ];
         FONTCONFIG_FILE = fontsConf;
         FONTCONFIG_PATH = builtins.dirOf fontsConf;
 

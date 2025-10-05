@@ -1,8 +1,13 @@
 {
-	"author": {
-		"from_git": true
-	},
-	"license": "GPL-3.0-or-later",
-	"include": ["**/*.rs"],
-	"exclude": []
+    "author": {
+        "from_git": true
+    },
+    "license": "GPL-3.0-or-later",
+    "include": [
+        "**/*.rs"
+    ],
+    "exclude": [
+        "^\\.[^/]+",
+        "/\\.[^/]+"
+    ]
 }

@@ -1,5 +1,5 @@
 repos:
-    - repo: https://github.com/emzeat/mz-lictools
-      rev: v2.8.0
+    - repo: https://github.com/efemero/mz-lictools
+      rev: v2.8.1
       hooks:
           - id: license-tools
