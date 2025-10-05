@@ -60,7 +60,7 @@
         ]
         ++ fontPackages;
         postInstall = ''
-          wrapProgram "$out/bin/partition" \
+          wrapProgram "$out/bin/partitions" \
             --prefix PATH : ${lilypondBinPath} \
             --set FONTCONFIG_FILE ${fontsConf} \
             --set FONTCONFIG_PATH ${builtins.dirOf fontsConf}
