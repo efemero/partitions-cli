@@ -42,7 +42,7 @@ enum Cli {
 #[derive(clap::Args, Debug)]
 #[command(version, about, long_about = None)]
 struct LilypondArgs {
-    /// Path to the music sources
+    /// limit the number of partitions to compile
     #[arg(short, long)]
     limit: Option<usize>,
 
